@@ -1,32 +1,54 @@
+/*--- Acessibilidade ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
 html {
     scroll-behavior: smooth; 
     scroll-padding-top: 120px;
 }
 
 body {
-    background-color: #F8F9FA; 
-    color: #333333; 
+    background-color: #FFFFFF; 
+    color: #1A2A40; 
     font-family: 'Roboto', sans-serif; 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
+main section {
+    margin-bottom: 60px; 
+    border-radius: 12px;
+}
+
+/*--- Navegação por teclado visível ---*/
+:focus-visible {
+    outline: 3px solid #1A2A40;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 h1, h2, h3 {
     color: #1A2A40;
 }
 
+/*--- LAYOUT GRID ---*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px; 
-    padding: 0 60px; 
+    padding: 0 30px; 
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
 }
 
+/*--- CABEÇALHO E MENU ---*/
 #cabecalho {
     padding-top: 30px;
     padding-bottom: 20px;
@@ -35,20 +57,23 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     background-color: transparent; 
-    z-index: 1000;
+    z-index: 1000; /*--- Sempre em cima do conteúdo da página --- */
     pointer-events: none;
 }
 
 .menu-navegacao {
     grid-column: 1 / 13; 
     justify-self: center; 
-    background-color: transparent;
+    background-color: rgba(248, 249, 250, 0.8); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /*--- Suporte para Safari ---*/
     border: 1px solid #1A2A40; 
     border-radius: 50px;
-    padding: 12px 25px;
+    padding: 16px 35px; 
     display: flex;
-    gap: 20px;
+    gap: 30px; 
     pointer-events: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
 }
 
 .menu-navegacao a {
@@ -56,7 +81,7 @@ h1, h2, h3 {
     text-decoration: none; 
     font-weight: 700;
     transition: color 0.2s;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
 }
 
 .menu-navegacao a:hover {
@@ -111,7 +136,7 @@ h1, h2, h3 {
 
 .hero-image img {
     width: 100%;
-    max-width: 420px; 
+    max-width: 550px; 
     height: auto;
     object-fit: contain;
     border-radius: 12px;
@@ -167,8 +192,12 @@ h1, h2, h3 {
 }
 
 .secao-conteudo {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    background-color: #FFFFFF; 
+    border-radius: 0;
+    padding: 80px 30px;
+    margin: 0;
+    border-bottom: none; 
+    box-shadow: none; 
 }
 
 .conteudo-texto {
@@ -203,74 +232,45 @@ h1, h2, h3 {
     clip-path: inset(0 -100vmax);
 }
 
+/*--- SEÇÃO HABILIDADES ---*/
 .habilidades-lista {
     display: flex;
-    gap: 60px;
+    gap: 150px; 
     margin-top: 30px;
 }
 
-.rodape {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-
-.rodape .conteudo-texto {
+/*--- SEÇÃO ODS ---*/
+#ods .conteudo-texto {
     grid-column: 1 / 13;
 }
 
-dialog {
-    border: 2px solid #3c4a5c;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    padding: 25px; 
-    background-color: #F8F9FA; 
-    font-family: 'Roboto', sans-serif;
-    width: 320px;
+.ods-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px; 
+    margin-top: 20px; 
 }
 
-dialog::backdrop {
-    background-color: rgba(26, 42, 64, 0.7);
-    backdrop-filter: blur(4px);
+.ods-imagem {
+    flex: 0 0 280px; 
+    display: flex;
+    justify-content: flex-start;
 }
 
-dialog input:focus {
-    outline: none;
-    border-color: #128B63 !important;
+.ods-imagem img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
-.btn-enviar {
-    background-color: #1a936f;
-    color: #F8F9FA;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    flex: 1; 
-    transition: background-color 0.3s;
-}
-
-.btn-enviar:hover {
-    background-color: #147959;
-}
-
-.btn-fechar {
-    background-color: #e2584d;
-    color: #F8F9FA;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+.ods-texto {
     flex: 1;
-    transition: background-color 0.3s;
 }
 
-.btn-fechar:hover {
-    background-color: #c94439;
-}
-
+/*--- SEÇÃO CONTATO ---*/
 .lista-contato {
     list-style-type: none;
     padding-left: 0 !important;
@@ -300,6 +300,11 @@ dialog input:focus {
     text-decoration: underline;
 }
 
+#contato.secao-conteudo {
+    border-bottom: none;
+}
+
+/*--- BOTÃO "CONTRATAR" ---*/
 .btn-contratar {
     display: inline-flex;
     align-items: center;
@@ -320,6 +325,27 @@ dialog input:focus {
 
 .btn-contratar:hover {
     background-color: #0c6145;
+}
+
+/*--- MODAL DE CONTATO ---*/
+dialog {
+    border: 2px solid #3c4a5c;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 25px; 
+    background-color: #F8F9FA; 
+    font-family: 'Roboto', sans-serif;
+    width: 320px;
+}
+
+dialog::backdrop {
+    background-color: rgba(26, 42, 64, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+dialog input:focus {
+    outline: none;
+    border-color: #128B63 !important;
 }
 
 dialog h3 {
@@ -363,56 +389,107 @@ dialog h3 {
     margin-top: 25px;
 }
 
-.ods-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px; 
-    margin-top: 40px; 
-}
-
-.ods-texto {
+.btn-enviar {
+    background-color: #1a936f;
+    color: #F8F9FA;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
     flex: 1; 
+    transition: background-color 0.3s;
 }
 
-.ods-imagem {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 420px; 
-    display: flex;
-    justify-content: flex-end;
+.btn-enviar:hover {
+    background-color: #147959;
 }
 
-.ods-imagem img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
+.btn-fechar {
+    background-color: #e2584d;
+    color: #F8F9FA;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    transition: background-color 0.3s;
 }
 
-/* Para Notebooks e Tablets em modo paisagem (até 1024px) */
+.btn-fechar:hover {
+    background-color: #c94439;
+}
+
+/*--- RODAPÉ ---*/
+.rodape {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.rodape .conteudo-texto {
+    grid-column: 1 / 13;
+}
+
+/*--- PARA NOTEBOOKS E TABLETS (MODO PAISAGEM) ---*/
 @media (max-width: 1024px) {
-    .grid-container { padding: 0 40px; }
+    .grid-container { 
+        padding: 0 40px; 
+    }
     
-    .conteudo-texto { grid-column: 2 / 12; }
+    .menu-navegacao {
+        padding: 12px 25px;
+        gap: 20px;
+    }
+    
+    .menu-navegacao a {
+        font-size: 1rem;
+    }
 
-    .hero-text h1 { font-size: 4rem; }
-    .hero-text { grid-column: 1 / 7; }
-    .hero-image { grid-column: 7 / 13; }
+    .conteudo-texto { 
+        grid-column: 2 / 12; 
+    }
+
+    .hero-text h1 { 
+        font-size: 3.5rem; 
+    }
+    .hero-text { 
+        grid-column: 1 / 7; 
+    }
+    .hero-image { 
+        grid-column: 7 / 13; 
+    }
 }
 
-/* Para Tablets em modo retrato e Smartphones grandes (até 768px) */
-@media (max-width: 768px) {
-    .grid-container { padding: 0 25px; }
+/*--- PARA TABLETS (MODO RETRATO) E SMARTPHONES GRANDES ---*/
+@media (max-width: 900px) {
+    main section {
+        margin-bottom: 40px;
+    }
 
-    /* ---- MENU MOBILE ATIVADO ---- */
+    .secao-conteudo {
+        padding: 60px 20px;
+    }
+
+    .grid-container { 
+        padding: 0 20px; 
+    }
+
     #cabecalho {
+        position: fixed;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        z-index: 10000;
+        display: flex;
         justify-content: flex-end;
-        pointer-events: none; 
+        pointer-events: none;
     }
 
     .btn-menu-mobile {
-        display: block; /* Mostra o ícone no mobile e tablet */
+        display: block; 
         grid-column: 12 / 13;
         justify-self: end;
         margin-top: -10px;
@@ -431,14 +508,35 @@ dialog h3 {
         width: 200px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         
-        /* Esconde o menu */
+        /*--- Esconde o menu ---*/
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);
         transition: all 0.3s ease;
     }
 
-    /* Mostra o menu quando o input escondido é marcado */
+    .menu-toggle-checkbox {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .btn-menu-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: #F8F9FA;
+        border: 2px solid #1A2A40;
+        border-radius: 10px;
+        cursor: pointer;
+        pointer-events: auto; /* Ativa explicitamente os cliques no botão */
+        z-index: 10001;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /*--- Mostra o menu quando o input escondido é marcado ---*/
     #menu-toggle:checked ~ .menu-navegacao {
         opacity: 1;
         visibility: visible;
@@ -446,19 +544,41 @@ dialog h3 {
         pointer-events: auto;
     }
 
-    /* ---- REORGANIZAÇÃO DO LAYOUT ---- */
-    .hero-text { grid-column: 1 / 13; text-align: center; }
-    .hero-text p { max-width: 100%; }
-    .tech-icons, .botoes-acao { justify-content: center; }
-    .hero-image { grid-column: 1 / 13; justify-content: center; margin-top: 30px; }
-    
-    .conteudo-texto { grid-column: 1 / 13; }
+    .hero-text { 
+        grid-column: 1 / 13; text-align: center; 
+    }
+    .hero-text p { 
+        max-width: 100%; 
+    }
+    .tech-icons, .botoes-acao { 
+        justify-content: center; 
+    }
+    .hero-image { 
+        grid-column: 1 / 13; justify-content: center; margin-top: 30px; 
+    }
+    .hero-section { 
+        padding-top: 140px; /*--- Desviar da câmara ---*/
+    } 
 
-    .ods-layout { flex-direction: column; text-align: center; gap: 30px; }
-    .ods-imagem { justify-content: center; max-width: 100%; }
-    .ods-imagem img { max-width: 350px; }
+    .conteudo-texto { 
+        grid-column: 1 / 13; 
+    }
 
-    .habilidades-lista { flex-direction: column; gap: 30px; }
+    .ods-layout { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+        gap: 30px; 
+    }
+    .ods-imagem { 
+        justify-content: center; max-width: 100%; 
+    }
+    .ods-imagem img { 
+        max-width: 350px; 
+    }
+
+    .habilidades-lista { 
+        flex-direction: column; gap: 30px; 
+    }
 
     .lista-contato li {
         display: flex;
@@ -469,17 +589,28 @@ dialog h3 {
     }
 }
 
-/* Para Smartphones pequenos (até 480px) */
+/*--- PARA SMARTPHONES PEQUENOS ---*/
 @media (max-width: 480px) {
     html {
         scroll-padding-top: 150px;
     }
 
-    .grid-container { padding: 0 15px; }
+    .grid-container { 
+        padding: 0 15px; 
+    }
 
-    .hero-text h1 { font-size: 3rem; }
-    .destaque-cargo { font-size: 1.4rem; }
-    .conteudo-texto h2 { font-size: 2rem; }
+    .hero-text h1 { 
+        font-size: 3rem; 
+    }
+    .destaque-cargo { 
+        font-size: 1.4rem; 
+    }
+    .conteudo-texto h2 { 
+        font-size: 2rem; 
+    }
+    .hero-section { 
+        padding-top: 130px; /*--- Melhora o espaço do ecrã ---*/
+    } 
 
     .botoes-acao {
         flex-direction: column;
@@ -501,23 +632,42 @@ dialog h3 {
     }
 }
 
-    .menu-toggle-checkbox {
-    display: none; /* Esconde a checkbox no computador */
+   .menu-toggle-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
+.menu-toggle-checkbox:focus-visible ~ .btn-menu-mobile {
+    outline: 3px solid #1A2A40;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/*--- MENU HAMBURGUER ---*/
 .btn-menu-mobile {
-    display: none; /* Escondido por padrão no Desktop */
-    background: transparent;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F8F9FA;
+    border: 2px solid #1A2A40;
+    border-radius: 10px;
     cursor: pointer;
-    z-index: 1001;
-    padding: 10px;
-    pointer-events: auto;
+    pointer-events: auto; /* Ativa explicitamente os cliques no botão */
+    z-index: 10001;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hamburguer {
     display: block;
-    width: 30px;
+    width: 24px;
     height: 3px;
     background-color: #1A2A40;
     position: relative;
@@ -535,16 +685,20 @@ dialog h3 {
     transition: transform 0.3s;
 }
 
-.hamburguer::before { top: -8px; }
-.hamburguer::after { top: 8px; }
+.hamburguer::before { 
+    top: -7px; 
+}
+.hamburguer::after { 
+    top: 7px; 
+}
 
-/* Animação do botão para virar um "X" quando selecionado */
+/*--- ANIMAÇÃO DO BOTÃO ---*/
 #menu-toggle:checked ~ .btn-menu-mobile .hamburguer {
     background-color: transparent;
 }
-#menu-toggle:checked ~ .btn-menu-mobile .hamburguer::before {
-    transform: translateY(8px) rotate(45deg);
+#menu-toggle:checked ~ .btn-menu-mobile .hamburger::before {
+    transform: translateY(7px) rotate(45deg);
 }
 #menu-toggle:checked ~ .btn-menu-mobile .hamburguer::after {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
