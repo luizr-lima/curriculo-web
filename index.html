@@ -1,162 +1,196 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Currículo - Luiz Ricardo</title>
-    </head>
-    <body>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefólio - Luiz Ricardo</title>
     
-<!-- Nome e dados -->
-        <header>
-            <h1>Luiz Ricardo Gabriel dos Santos Lima</h1>
-            <figure>
-                <img src="./imagens/EU2.png" alt="Foto de Luiz Ricardo" width="200">
-            </figure>
-            <p>📍 Leópolis, PR - Brasil ·  
-                <img src="./icones/whatsapp.svg" alt="WhatsApp" width="20">
-                <a href="https://wa.me/5543984220329">(43) 98422-0329</a> ·
-                ✉️<a href="mailto:luiz.031218@gmail.com"> luiz.031218@gmail.com</a>
-            </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <hr />
+    <!-- Cabeçalho com menu -->
+    <header id="cabecalho" class="grid-container">
+        <!-- Menu mobile -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        
+        <label for="menu-toggle" class="btn-menu-mobile" aria-label="Abrir menu">
+            <span class="hamburguer"></span>
+        </label>
 
-<!-- Menu de navegação interna -->
-            <nav aria-label="Menu de navegação interna">
+        <nav class="menu-navegacao">
+            <a href="#">Início</a>
+            <a href="#resumo">Resumo</a>
+            <a href="#ods">ODS</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#educacao">Educação</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#idiomas">Idiomas</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+        <!-- Resumo -->
+        <section id="resumo" class="grid-container hero-section">
+            <div class="hero-text">
+                <h1>Luiz Ricardo<br>Gabriel dos<br>Santos Lima</h1>
+                <h2 class="destaque-cargo">Desenvolvedor Front-end</h2>
                 <p>
-                    <a href="#summary">Resumo</a> |
-                    <a href="#ods">ODS</a> |
-                    <a href="#experience">Experiência</a> |
-                    <a href="#education">Educação</a> |
-                    <a href="#skills">Habilidades</a> |
-                    <a href="#languages">Idiomas</a>
+                    Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia, games e inovação. Busco oportunidades para aplicar meu raciocínio lógico e interesse por softwares em um ambiente corporativo, mantendo sempre o foco em aprendizado contínuo.
                 </p>
-            </nav>
-        </header>
-        
-        <hr />
+                
+                <a href="./cv/curriculo.pdf" download="CV_LuizRicardo.pdf" class="btn-cv">
+                    Baixar CV
+                </a>
 
-        <main>
-<!-- Seção de Resumo -->
-            <section id="summary">
-                <h2>Resumo</h2>
-                <p>Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia, games e inovação. 
-                    Atualmente, desenvolvo minhas habilidades de comunicação, empatia e resolução rápida de problemas atuando 
-                    com atendimento ao cliente e vendas. Busco oportunidades para aplicar meu raciocínio lógico e interesse 
-                    por softwares em um ambiente corporativo, mantendo sempre o foco em aprendizado contínuo.</p>
-
-                <div>
-                    <img src="./icones/linkedin.svg" alt="LinkedIn" width="20">
-                    <a href="https://linkedin.com/in/lzlima"> LinkedIn</a> | 
-                    <img src="./icones/github.svg" alt="GitHub" width="20">
-                    <a href="https://github.com/luizr-lima"> GitHub</a>
+                <div class="tech-stack">
+                    <p class="tech-title">Trabalho com</p>
+                    <div class="tech-icons">
+                        <img src="icones/html.svg" alt="HTML5">
+                        <img src="icones/css.svg" alt="CSS3">
+                        <img src="icones/c.svg" alt="C">
+                        <img src="icones/java.svg" alt="Java">
+                        <img src="icones/git.svg" alt="Git">
+                    </div>
                 </div>
-            </section>
+            </div>
 
-        <hr />
-
-<!-- Seção de ODS -->
-            <section id="ods">
-                <h2>ODS que pretendo contribuir</h2>
-                <figure>
-                    <img src="https://brasil.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/pt-br/SDG-4.svg" alt="ODS 4 - Educação de Qualidade" width="150">
-                    <figcaption>ODS 4: Educação de Qualidade</figcaption>
-                </figure>
-            </section>
-
-        <hr />
-
-<!-- Seção de Experiência Profissional -->
-            <section id="experience">
-                <h2>Experiência Profissional</h2>
-                <h3>Vendedor de Comércio Varejo</h3>
-                <p><strong>Lojas Garcia</strong> | 08/2026 - Atualmente</p>
-                <p>Atendimento ao cliente, vendas, organização de produtos e suporte no controle do fluxo de caixa.</p>
-            </section>
-
-        <hr /> 
-
-<!-- Seção de Educação -->
-            <section id="education">
-                <h2>Educação</h2>
-                <h3>Universidade Tecnológica Federal do Paraná - Cornélio Procópio</h3>
-                <p><strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong> | 2026 - Presente</p>
-            </section>
-
-        <hr />
-
-<!-- Seção de Habilidades -->
-            <section id="skills">
-                <h2>Habilidades</h2>
-                <h3>Linguagens e Tecnologias</h3>
-                    <ul>
-                        <li><img src="./icones/c.svg" alt="C Logo" width="20">
-                        C</li>
-                        <li><img src="./icones/css.svg" alt="CSS3 Logo" width="20">
-                        CSS3</li>
-                        <li><img src="./icones/html.svg" alt="HTML5 Logo" width="20">
-                        HTML5</li>
-                    </ul>
-
-                <h3>Sistemas Operacionais e Softwares</h3>
-                    <ul>
-                        <li><img src="./icones/windows.svg" alt="Windows Logo" width="20">
-                        Windows</li>
-                        <li><img src="./icones/linux.svg" alt="Linux Tux" width="20">
-                        Linux</li>
-                        <li><img src="./icones/office.svg" alt="Microsoft Office" width="20">
-                        Microsoft Office</li>
-                    </ul>
-            </section>
-
-        <hr />
-
-<!-- Seção de Idiomas -->
-            <section id="languages">
-                <h2>Idiomas</h2>
-                <ul>
-                    <li>🇧🇷 Português - Nativo</li>
-                    <li>🇺🇸 Inglês - Básico (A2)</li>
-                </ul>
-            </section>
-        </main>
-        
-        <hr />
-
-        <!-- Botão para abrir o modal de contato -->
-        <section id="contato">
-            <button type="button" onclick="modalContato.showModal()">Enviar informações de contato</button>
-
-            <dialog id="modalContato">
-                <form id="formContato" method="dialog">
-                    <fieldset style="width: 280px;">
-                        <legend><b>Formulário de Contato</b></legend>
-                        
-                        <p>
-                            <label for="nome">Nome completo:</label><br />
-                            <input type="text" id="nome" name="nome" required />
-                        </p>
-               
-                        <p>
-                            <label for="instagram">Link para o Instagram:</label><br />
-                            <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/seu-usuario" required />
-                        </p>
-
-                        <p>
-                            <label for="whatsapp">Número do WhatsApp:</label><br />
-                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required />
-                        </p>
-
-                        <button type="submit">Enviar</button>
-                        <button type="button" onclick="modalContato.close()">Fechar</button>
-                    </fieldset>   
-                </form>
-            </dialog>
+            <div class="hero-image">
+                <img src="./imagens/foto1.png" alt="Foto de Luiz Ricardo">
+            </div>
         </section>
 
-        <hr />
+        <!-- ODS -->
+        <section id="ods" class="grid-container secao-conteudo">
+            <div class="conteudo-texto ods-layout">
+                <div class="ods-texto">
+                    <h2>Objetivos de Desenvolvimento Sustentável (ODS)</h2>
+                    <p><strong>ODS 4: Educação de Qualidade</strong></p>
+                    <p>Pretendo contribuir para a garantia de uma educação inclusiva, equitativa e de qualidade, promovendo oportunidades de aprendizagem ao longo da vida, especialmente através da tecnologia e da partilha de conhecimento na área de desenvolvimento de software.</p>
+                </div>
+                <div class="ods-imagem">
+                    <img src="./icones/ods4.svg" alt="Selo ODS 4 - Educação de Qualidade">
+                </div>
+            </div>
+        </section>
 
-        <footer><p><small>Setembro de 2026 · S.D.G</small></p></footer>
-    
-    </body>
+        <!-- Experiência -->
+        <section id="experiencia" class="grid-container secao-conteudo fundo-alternativo">
+            <div class="conteudo-texto">
+                <h2>Experiência Profissional</h2>
+                <h3 class="destaque-cargo">Vendedor de Comércio Retalho</h3>
+                <p><strong>Lojas Garcia</strong> | 08/2026 - Presente</p>
+                <ul>
+                    <li>Atendimento ao cliente e vendas, desenvolvendo forte capacidade de comunicação e empatia.</li>
+                    <li>Organização de produtos e suporte no controlo do fluxo de caixa, garantindo atenção a detalhes e responsabilidade.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Educação -->
+        <section id="educacao" class="grid-container secao-conteudo">
+            <div class="conteudo-texto">
+                <h2>Educação</h2>
+                <h3>Universidade Tecnológica Federal do Paraná - UTFPR (Campus Cornélio Procópio)</h3>
+                <p><strong>Tecnologia em Análise e Desenvolvimento de Sistemas</strong> | 2026 - Presente</p>
+                <p>Foco em desenvolvimento de software, lógica de programação, arquitetura de sistemas e metodologias ágeis.</p>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="grid-container secao-conteudo fundo-alternativo">
+            <div class="conteudo-texto">
+                <h2>Habilidades e Competências</h2>
+                <div class="habilidades-lista">
+                    <div>
+                        <h3>Hard Skills</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>Linguagem C</li>
+                            <li>Java</li>
+                            <li>Git & Controlo de Versões</li>
+                            <li>Pacote Office</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Proatividade</li>
+                            <li>Organização</li>
+                            <li>Empatia e Comunicação</li>
+                            <li>Resolução rápida de problemas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section id="idiomas" class="grid-container secao-conteudo">
+            <div class="conteudo-texto">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li><strong>Português:</strong> Nativo</li>
+                    <li><strong>Inglês:</strong> Básico (A2)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Contato -->
+       <section id="contato" class="grid-container secao-conteudo fundo-alternativo">
+            <div class="conteudo-texto">
+                <h2>Contato</h2>
+                <p>Fique à vontade para entrar em contato comigo através das minhas redes ou informações abaixo:</p>
+                <ul class="lista-contato">
+                    <li>📍 <strong>Cidade:</strong> Leópolis, PR - Brasil</li>
+                    <li><img src="./icones/whatsapp.svg" alt="WhatsApp"> <strong>Telefone/WhatsApp:</strong> <a href="https://wa.me/5543984220329" target="_blank">(43) 98422-0329</a></li>
+                    <li>✉️ <strong>E-mail:</strong> <a href="mailto:luiz.031218@gmail.com">luiz.031218@gmail.com</a></li>
+                    <li><img src="./icones/linkedin.svg" alt="LinkedIn"> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lzlima" target="_blank">linkedin.com/in/lzlima</a></li>
+                    <li><img src="./icones/github.svg" alt="GitHub"> <strong>GitHub:</strong> <a href="https://github.com/luizr-lima" target="_blank">github.com/luizr-lima</a></li>
+                </ul>
+
+                <!-- Botão que aciona o Modal -->
+                <button type="button" class="btn-contratar" onclick="document.getElementById('modalContato').showModal()">Contrate-me</button>
+
+                <!-- Modal --> 
+                <dialog id="modalContato">
+                    <form id="formContato" method="dialog">
+                        <h3>Formulário de Contato</h3>
+                        
+                        <div class="form-grupo">
+                            <label for="nome">Nome completo:</label>
+                            <input type="text" id="nome" name="nome" required />
+                        </div>
+               
+                        <div class="form-grupo">
+                            <label for="instagram">Link para o Instagram:</label>
+                            <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/seu-usuario" required />
+                        </div>
+        
+                        <div class="form-grupo">
+                            <label for="whatsapp">Número do WhatsApp:</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required />
+                        </div>
+        
+                        <div class="modal-acoes">
+                            <button type="submit" class="btn-enviar">Enviar</button>
+                            <button type="button" class="btn-fechar" onclick="document.getElementById('modalContato').close()">Fechar</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </section>
+    </main>
+
+    <footer class="grid-container rodape">
+        <div class="conteudo-texto">
+            <p><small>© 2026 S.D.G. Todos os direitos reservados.</small></p>
+        </div>
+    </footer>
+
+</body>
 </html>
