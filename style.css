@@ -548,4 +548,3 @@ dialog h3 {
 #menu-toggle:checked ~ .btn-menu-mobile .hamburguer::after {
     transform: translateY(-8px) rotate(-45deg);
 }
-}
