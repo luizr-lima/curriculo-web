@@ -135,14 +135,6 @@ h1, h2, h3 {
     white-space: nowrap;
 }
 
-.destaque-cargo {
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: var(--azul);
-    margin: 15px 0 25px 0;
-}
-
 .hero-text p {
     font-size: 1.15rem;
     line-height: 1.7;
@@ -432,7 +424,6 @@ input[required] {
 
 /*--- CELULARES PEQUENOS ---*/
 @media (max-width: 480px) {
-    .destaque-cargo { font-size: 1.4rem; }
     .conteudo-texto h2 { font-size: 2rem; }
 
     .btn-cv, .btn-contratar { width: 100%; }
