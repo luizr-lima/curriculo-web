@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -16,14 +16,7 @@
 <body>
 
     <!-- Cabeçalho com menu -->
-    <header id="cabecalho" class="grid-container">
-        <!-- Checkbox do menu mobile -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-        <!-- Botão do menu mobile -->
-        <label for="menu-toggle" class="btn-menu-mobile" aria-label="Abrir menu">
-            <span class="hamburguer"></span>
-        </label>
-
+    <header id="cabecalho">
         <!-- Menu de navegação -->
         <nav class="menu-navegacao" aria-label="Menu principal">            
             <a href="#resumo">Resumo</a>
@@ -36,10 +29,11 @@
         </nav>
     </header>
 
+    <main>
         <!-- Resumo -->
         <section id="resumo" class="grid-container hero-section">
             <div class="hero-text">
-                <h1>Luiz Ricardo<br>Gabriel dos<br>Santos Lima</h1>
+                <h1><span>Luiz Ricardo</span> <span>Gabriel dos</span> <span>Santos Lima</span></h1>
                 <h2 class="destaque-cargo">Desenvolvedor Front-end</h2>
                 <p>
                     Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia, games e inovação. Busco oportunidades para aplicar meu raciocínio lógico e interesse por softwares em um ambiente corporativo, mantendo sempre o foco em aprendizado contínuo.
@@ -76,7 +70,7 @@
                 <div class="ods-texto">
                     <h2>Objetivos de Desenvolvimento Sustentável (ODS)</h2>
                     <p><strong>ODS 4: Educação de Qualidade</strong></p>
-                    <p>Pretendo contribuir para a garantia de uma educação inclusiva, equitativa e de qualidade, promovendo oportunidades de aprendizagem ao longo da vida, especialmente através da tecnologia e da partilha de conhecimento na área de desenvolvimento de software.</p>
+                    <p>Pretendo contribuir para a garantia de uma educação inclusiva, equitativa e de qualidade, promovendo oportunidades de aprendizagem ao longo da vida, especialmente através da tecnologia e do compartilhamento de conhecimento na área de desenvolvimento de software.</p>
                 </div>
             </div>
         </section>
@@ -89,7 +83,7 @@
                 <p><strong>Lojas Garcia</strong> | 08/2026 - Presente</p>
                 <ul>
                     <li>Atendimento ao cliente e vendas, desenvolvendo forte capacidade de comunicação e empatia.</li>
-                    <li>Organização de produtos e suporte no controlo do fluxo de caixa, garantindo atenção a detalhes e responsabilidade.</li>
+                    <li>Organização de produtos e suporte no controle do fluxo de caixa, garantindo atenção a detalhes e responsabilidade.</li>
                 </ul>
             </div>
         </section>
@@ -98,8 +92,8 @@
         <section id="educacao" class="grid-container secao-conteudo  fundo-alternativo">
             <div class="conteudo-texto">
                 <h2>Educação</h2>
-                <h3>Universidade Tecnológica Federal do Paraná - UTFPR (Campus Cornélio Procópio)</h3>
-                <p><strong>Tecnologia em Análise e Desenvolvimento de Sistemas</strong> | 2026 - Presente</p>
+                <h3><span>Universidade Tecnológica Federal do Paraná - UTFPR (Campus Cornélio Procópio)</span></h3>
+                <p><strong><span>Tecnologia em Análise e Desenvolvimento de Sistemas</span></strong> | 2026 - Presente</p>
                 <p>Foco em desenvolvimento de software, lógica de programação, arquitetura de sistemas e metodologias ágeis.</p>
             </div>
         </section>
@@ -149,12 +143,12 @@
             <div class="conteudo-texto">
                 <h2>Contato</h2>
                 <p>Fique à vontade para entrar em contato comigo através das minhas redes ou informações abaixo:</p>
-                <ul class="lista-contato">
-                    <li>📍 <strong>Cidade:</strong> Leópolis, PR - Brasil</li>
-                    <li><img src="./icones/whatsapp.svg" alt="" aria-hidden="true"> <strong>Telefone/WhatsApp:</strong> <a href="https://wa.me/5543984220329" target="_blank">(43) 98422-0329</a></li>
-                    <li>✉️ <strong>E-mail:</strong> <a href="mailto:luiz.031218@gmail.com">luiz.031218@gmail.com</a></li>
-                    <li><img src="./icones/linkedin.svg" alt="" aria-hidden="true"> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lzlima" target="_blank">linkedin.com/in/lzlima</a></li>
-                    <li><img src="./icones/github.svg" alt="" aria-hidden="true"> <strong>GitHub:</strong> <a href="https://github.com/luizr-lima" target="_blank">github.com/luizr-lima</a></li>
+                <ul class="lista-contato"><br>
+                    <li><span aria-hidden="true">📍</span> <strong>Cidade:</strong> Leópolis, PR - Brasil</li>
+                    <li><img src="./icones/whatsapp.svg" alt="" aria-hidden="true"> <strong>Telefone/WhatsApp:</strong> <a href="https://wa.me/5543984220329" target="_blank" rel="noopener noreferrer">(43) 98422-0329</a></li>
+                    <li><span aria-hidden="true">✉️</span> <strong>E-mail:</strong> <a href="mailto:luiz.031218@gmail.com">luiz.031218@gmail.com</a></li>
+                    <li><img src="./icones/linkedin.svg" alt="" aria-hidden="true"> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lzlima" target="_blank" rel="noopener noreferrer">linkedin.com/in/lzlima</a></li>
+                    <li><img src="./icones/github.svg" alt="" aria-hidden="true"> <strong>GitHub:</strong> <a href="https://github.com/luizr-lima" target="_blank" rel="noopener noreferrer">github.com/luizr-lima</a></li>
                 </ul>
 
                 <!-- Botão do modal de contato -->
